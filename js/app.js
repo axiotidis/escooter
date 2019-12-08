@@ -122,7 +122,7 @@ function setPosition(position) {
   lng = position.coords.longitude.toString();		//find lognitude
   //var marker = new L.marker([lat, lng], {icon: redIcon}).addTo(map);	//set a marker in current geoposition
   //var mypopup = "You are here";
-  //map.setView([klat, klng], zoom);			//No auto pan!!!!!!!!!!!!!!!!
+  map.setView([klat, klng], zoom);			//No auto pan!!!!!!!!!!!!!!!!
   //marker.bindPopup(mypopup).openPopup();
 }
 
