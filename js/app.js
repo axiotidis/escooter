@@ -111,7 +111,7 @@ var center = new L.LatLng(klat, klng);
 var map = new L.map('map', {center: center, zoomControl: false, minZoom: 0, maxZoom: 50, layers: [basemap] });
 var popup = L.popup();
 
-/* Disable this function in desktop application
+// Disable some features in desktop application
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(setPosition);
   }
@@ -120,12 +120,12 @@ if (navigator.geolocation) {
 function setPosition(position) {
   lat = position.coords.latitude.toString();		//find latitude
   lng = position.coords.longitude.toString();		//find lognitude
-  var marker = new L.marker([lat, lng], {icon: redIcon}).addTo(map);	//set a marker in current geoposition
-  var mypopup = "You are here";
-  map.setView([klat, klng], zoom);			//No auto pan!!!!!!!!!!!!!!!!
-  marker.bindPopup(mypopup).openPopup();
+  //var marker = new L.marker([lat, lng], {icon: redIcon}).addTo(map);	//set a marker in current geoposition
+  //var mypopup = "You are here";
+  //map.setView([klat, klng], zoom);			//No auto pan!!!!!!!!!!!!!!!!
+  //marker.bindPopup(mypopup).openPopup();
 }
-*/
+
 var i;
 for (i = 0; i < 11; i++) {
   	let ref = database.ref("poi/" +i); 
