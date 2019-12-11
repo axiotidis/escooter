@@ -86,7 +86,7 @@ document.getElementById('profileForm').addEventListener('submit', submitForm);
 //Submit form
 function submitForm(e){
     e.preventDefault();
-    alert("Τσαπρρρρρρ");
+    
     //Get values
     var email = getInputVal('email');
     var phone = getInputVal('phone');
