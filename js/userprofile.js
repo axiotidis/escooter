@@ -89,7 +89,7 @@ function submitForm(e){
     
     //Get values
     var update = getInputVal('update');
-    console.log("update val = " + update);
+    if (update == "update"){
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var payment = getInputVal('payment');
@@ -98,7 +98,7 @@ function submitForm(e){
     var nickname = getInputVal('nickname');
     var bday = getInputVal('bday');
 	
-	var today = new Date();
+    var today = new Date();
     var difference = (today.getFullYear() - bday.substring(0,4));
     if (difference > 17){
 	
@@ -129,6 +129,7 @@ function submitForm(e){
 	}else {
 	alert("You must be adult to rent a scooter");
 }
+    }
 }
 
 
