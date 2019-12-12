@@ -24,7 +24,7 @@ function submitForm(e){
   
     //Get values
     var signup = getInputVal('signup');
-    alert(signup);
+    console.log("signup val = " + signup);
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var password = getInputVal('password');
