@@ -88,6 +88,8 @@ function submitForm(e){
     e.preventDefault();
     
     //Get values
+    var update = getInputVal('update');
+    console.log("update val = " + update);
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var payment = getInputVal('payment');
