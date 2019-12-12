@@ -23,6 +23,8 @@ function submitForm(e){
     e.preventDefault();
   
     //Get values
+    var signup = getInputVal('signup');
+    alert(signup);
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var password = getInputVal('password');
