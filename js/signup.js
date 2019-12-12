@@ -22,9 +22,7 @@ document.getElementById('singupForm').addEventListener('submit', submitForm);
 function submitForm(e){
     e.preventDefault();
   
-    //Get values
-    var signup = getInputVal('signup');
-    console.log("signup val = " + signup);
+    //Get value
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var password = getInputVal('password');
