@@ -88,7 +88,7 @@ function submitForm(e){
     e.preventDefault();
   
     //Get values
-    var submited = getInputVal('profileForm');
+    var submited = getInputVal('form.submited');
     console.log("submited value = " + submited);
     var email = getInputVal('email');
     var phone = getInputVal('phone');
