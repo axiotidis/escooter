@@ -90,8 +90,6 @@ function submitForm(e){
     //Get values
     var submited = getInputVal('profileForm');
     console.log("form value = " + submited);
-    var submited2 = getInputVal('profileForm.submited');
-    console.log("submited value = " + submited2);
     var email = getInputVal('email');
     var phone = getInputVal('phone');
     var payment = getInputVal('payment');
