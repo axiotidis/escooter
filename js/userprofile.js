@@ -8,7 +8,7 @@ var userNickname = "";
 var userBday = ""; 
 var dbKey ="";
 
-function readButton(jQuery(function($) {
+function readButton({jQuery(function($) {
       var submitActor = null;
       var $form = $('#profileForm');
       var $submitActors = $form.find('button[type=submit]');
@@ -31,7 +31,7 @@ function readButton(jQuery(function($) {
       $submitActors.click(function(event) {
           submitActor = this;
       });
-  }););
+  });});
 
 // Your web app's Firebase configuration
   var firebaseConfig = {
