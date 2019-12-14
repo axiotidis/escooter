@@ -84,7 +84,11 @@ function errData(error){
 //Listen for form submit
 document.getElementById('profileForm').addEventListener('submit', submitForm);
 
-jQuery(function($) {
+
+
+//Submit form
+function submitForm(e){
+	jQuery(function($) {
       var submitActor = null;
       var $form = $('#profileForm');
       var $submitActors = $form.find('button[type=submit]');
@@ -108,9 +112,6 @@ jQuery(function($) {
           submitActor = this;
       });
   });
-
-//Submit form
-function submitForm(e){
 	if (whatButtonPressed == "update"){
     e.preventDefault();
   
