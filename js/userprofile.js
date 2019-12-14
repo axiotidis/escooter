@@ -1,4 +1,4 @@
-var whatButtonPressed ="";
+var whatButtonPressed;
 var userEmail ="";
 var userPhone =0;
 var userPayment = "";
@@ -84,11 +84,7 @@ function errData(error){
 //Listen for form submit
 document.getElementById('profileForm').addEventListener('submit', submitForm);
 
-
-
-//Submit form
-function submitForm(e){
-	jQuery(function($) {
+jQuery(function($) {
       var submitActor = null;
       var $form = $('#profileForm');
       var $submitActors = $form.find('button[type=submit]');
@@ -112,6 +108,10 @@ function submitForm(e){
           submitActor = this;
       });
   });
+
+//Submit form
+function submitForm(e){
+	console.log("whatButtonPressed= " + whatButtonPressed);
 	if (whatButtonPressed == "update"){
     e.preventDefault();
   
