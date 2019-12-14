@@ -14,13 +14,13 @@
     width:100%;
     padding:1em;
     border:1px solid #92bde7;
-    background:#92bde7;
+    background:#ffddc9;
     color:#000000
     border:0;
     font-size: 18px;
   }
  .cancelButton:hover,.cancelButton:focus{
-    background:#c9e6ff;
+    background:#e7b192;
     color:#ffffff;
     outline:0;
   }
