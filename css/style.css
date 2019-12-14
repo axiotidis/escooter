@@ -13,14 +13,14 @@
   .cancelButton{
     width:100%;
     padding:1em;
-    border:1px solid #ff3300;
-    background:#ff3300;
+    border:1px solid #92bde7;
+    background:#92bde7;
     color:#ffffff
     border:0;
     font-size: 18px;
   }
  .cancelButton:hover{
-    background:#ff6600;
+    background:#c9e6ff;
     color:#e6e6e6;
     outline:0;
   }
