@@ -1,3 +1,4 @@
+var whatButtonPressed ="";
 var userEmail ="";
 var userPhone =0;
 var userPayment = "";
@@ -86,7 +87,7 @@ document.getElementById('profileForm').addEventListener('submit', submitForm);
 jQuery(function($) {
       var submitActor = null;
       var $form = $('#profileForm');
-      var $submitActors = $form.find('input[type=submit]');
+      var $submitActors = $form.find('button[type=submit]');
 
       $form.submit(function(event) {
           if (null === submitActor) {
@@ -96,7 +97,8 @@ jQuery(function($) {
               submitActor = $submitActors[0];
           }
 
-          console.log(submitActor.name);
+          console.log("user pressed the key: " + submitActor.name);
+		  whatButtonPressed = submitActor.name;
           // alert("user pressed the key: " + submitActor.name);
 
           return false;
@@ -109,6 +111,7 @@ jQuery(function($) {
 
 //Submit form
 function submitForm(e){
+	if (whatButtonPressed == "update"){
     e.preventDefault();
   
     //Get values
@@ -151,6 +154,19 @@ function submitForm(e){
 	}else {
 	alert("You must be adult to rent a scooter");
 }
+	}else{
+		//Clear form
+    document.getElementById('profileForm').reset();
+
+    setTimeout(function(){
+        document.querySelector('.continue').style.display = 'block';
+    },2000);
+
+    setTimeout(function(){
+        document.querySelector('.continue').style.display = 'none';
+        window.location.replace("app.html");
+    },4000);
+	}
 }
 
 
