@@ -8,6 +8,31 @@ var userNickname = "";
 var userBday = ""; 
 var dbKey ="";
 
+jQuery(function($) {
+      var submitActor = null;
+      var $form = $('#profileForm');
+      var $submitActors = $form.find('button[type=submit]');
+
+      $form.submit(function(event) {
+          if (null === submitActor) {
+              // If no actor is explicitly clicked, the browser will
+              // automatically choose the first in source-order
+              // so we do the same here
+              submitActor = $submitActors[0];
+          }
+
+          console.log("user pressed the key: " + submitActor.name);
+		  whatButtonPressed = submitActor.name;
+          // alert("user pressed the key: " + submitActor.name);
+
+          return false;
+      });
+
+      $submitActors.click(function(event) {
+          submitActor = this;
+      });
+  });
+
 // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyDU1RPg4avyJA4Dv4DCGtGb2nnne8FZCfk",
@@ -84,34 +109,10 @@ function errData(error){
 //Listen for form submit
 document.getElementById('profileForm').addEventListener('submit', submitForm);
 
-jQuery(function($) {
-      var submitActor = null;
-      var $form = $('#profileForm');
-      var $submitActors = $form.find('button[type=submit]');
 
-      $form.submit(function(event) {
-          if (null === submitActor) {
-              // If no actor is explicitly clicked, the browser will
-              // automatically choose the first in source-order
-              // so we do the same here
-              submitActor = $submitActors[0];
-          }
-
-          console.log("user pressed the key: " + submitActor.name);
-		  whatButtonPressed = submitActor.name;
-          // alert("user pressed the key: " + submitActor.name);
-
-          return false;
-      });
-
-      $submitActors.click(function(event) {
-          submitActor = this;
-      });
-  });
 
 //Submit form
 function submitForm(e){
-	console.log("whatButtonPressed= " + whatButtonPressed);
 	if (whatButtonPressed == "update"){
     e.preventDefault();
   
