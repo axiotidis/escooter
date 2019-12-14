@@ -113,6 +113,7 @@ document.getElementById('profileForm').addEventListener('submit', submitForm);
 
 //Submit form
 function submitForm(e){
+	console.log("whatButtonPressed= " + whatButtonPressed);
 	if (whatButtonPressed == "update"){
     e.preventDefault();
   
